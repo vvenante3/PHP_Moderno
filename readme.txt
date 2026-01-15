@@ -11,4 +11,16 @@ Server-Side (Back-End)
 
 
 
+
+-> Servidor
+    Navegador + Editor de Códigos + "A Tríade * "
+
+-> A Tríade
+    Apache + Banco Dados + PHP
+    --------------------------
+                AMP
+
+Linux       -> *L*AMP
+Windows     -> *W*AMP    -> Qualquer OS: XAMPP
+MaciOS      -> *M*AMP
             
