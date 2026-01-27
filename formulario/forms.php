@@ -12,17 +12,17 @@
     <div>
         <form action="interface.php" method="POST">
             <label>Primeiro número:</label>
-            <input type="number">
+            <input type="number" name = "primeiro_num" id = "primeiro_num">
 
             <br><br>
 
             <label>Expressão Aritimética:</label>
-            <input type="text">
+            <input type="text" name = "expressao" id = "expressao">
 
             <br><br>
 
             <label>Segundo número:</label>
-            <input type="number">
+            <input type="number" name = "segundo_num" id = "segundo_num">
 
             <br><br>
 
