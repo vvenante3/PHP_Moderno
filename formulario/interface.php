@@ -21,9 +21,31 @@
                 $segundo_num = htmlspecialchars($_POST['segundo_num']);
                 $expressao = htmlspecialchars($_POST['expressao']);
 
-                // fazer validacao dos campos
+                // fazer validacao dos campos 
+
+                if($primeiro_num === ''){
+                    $erros[] = "O campo do primeiro número está vazio/inválido<br>";
+                }
+
+                if($segundo_num === ''){
+                    $erros[] = "O campo do segundo número está vazion/inválido<br>";
+                }
+
+                if($expressao === ''){
+                    $erros[] = "Não há uma expressão definida";
+                }
 
                 // Se houver erros, exibi-los
+
+                if(strlen($erros)){
+                    $erros[] = "Erros:";
+                }
+
+                if(!empty($erros)){
+                    foreach($erros as $erro){
+                        echo "<li>$erro</li>";
+                    }
+                }
 
                 // parte que irá apresentar o resultado
 
