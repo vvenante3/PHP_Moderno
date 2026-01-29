@@ -8,8 +8,9 @@
 <body>
     <?php
 
+        $erros = [];
         // Criar $metodo que identifica se ira ser GET, POST, PUT, DELETE...
-        $metodo = $_SERVER('REQUEST_METHOD');
+        $metodo = $_SERVER['REQUEST_METHOD'];
 
         // Se metodo for 'POST', executar..
         if($metodo === 'POST'){
@@ -23,31 +24,30 @@
 
                 // fazer validacao dos campos 
 
-                if($primeiro_num === ''){
+                if($primeiro_num === '' || !is_numeric($primeiro_num)){
                     $erros[] = "O campo do primeiro número está vazio/inválido<br>";
                 }
 
-                if($segundo_num === ''){
+                if($segundo_num === '' || !is_numeric($segundo_num)){
                     $erros[] = "O campo do segundo número está vazion/inválido<br>";
                 }
 
                 if($expressao === ''){
-                    $erros[] = "Não há uma expressão definida";
+                    $erros[] = "Não há uma expressão definida<br.";
                 }
 
                 // Se houver erros, exibi-los
-
-                if(strlen($erros)){
-                    $erros[] = "Erros:";
-                }
 
                 if(!empty($erros)){
                     foreach($erros as $erro){
                         echo "<li>$erro</li>";
                     }
+                    return;
                 }
 
                 // parte que irá apresentar o resultado
+
+
 
 
             }
@@ -58,12 +58,6 @@
             echo "não é método POST";
         }
 
-
-
-
-
-
-    
     ?>
 
     <a href="forms.php">Voltar</a>
