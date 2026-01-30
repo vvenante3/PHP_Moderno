@@ -45,7 +45,41 @@
                     return;
                 }
 
-                // parte que irá apresentar o resultado
+                // lógica do operador
+
+                switch ($expressao) {
+                    case '+':
+                        $resultado = $primeiro_num + $segundo_num;
+                        break;
+
+                    case '-':
+                        $resultado = $primeiro_num - $segundo_num;
+                        break;
+
+                    case '*':
+                        $resultado = $primeiro_num * $segundo_num;
+                        break;
+
+                    case '/':
+                        if($segundo_num === 0){
+                            echo "divisão impossível de acontecer!<br>";
+                            exit;
+                        } else {
+                            $resultado = $primeiro_num / $segundo_num;
+                        }
+                        break;
+                    
+                    default:
+                        echo "erro em definir a expressão aritmética.<br>";
+                        break;
+                }
+
+                // se não houver erros, fazer o cálculo
+
+
+
+
+
 
 
 
