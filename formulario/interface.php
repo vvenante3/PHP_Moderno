@@ -33,7 +33,7 @@
                 }
 
                 if($expressao === ''){
-                    $erros[] = "Não há uma expressão definida<br.";
+                    $erros[] = "Não há uma expressão definida<br>";
                 }
 
                 // Se houver erros, exibi-los
@@ -61,33 +61,24 @@
                         break;
 
                     case '/':
-                        if($segundo_num === 0){
-                            echo "divisão impossível de acontecer!<br>";
-                            exit;
+                        if($segundo_num == 0){
+                            echo "Divisão impossível de ser realizada<br>";
+                            break;
                         } else {
                             $resultado = $primeiro_num / $segundo_num;
+                            break;
                         }
-                        break;
                     
                     default:
                         echo "erro em definir a expressão aritmética.<br>";
+                        // não irá exibir nenhuma mensagem
                         break;
                 }
 
                 // se não houver erros, fazer o cálculo
 
-
-
-
-
-
-
-
-
             }
             
-
-
         } else {
             echo "não é método POST";
         }
