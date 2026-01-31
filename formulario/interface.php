@@ -75,8 +75,13 @@
                         break;
                 }
 
-                // se não houver erros, fazer o cálculo
+                // se não houver erros, fazer o cálcul
 
+                if(isset($resultado)){
+                        echo $resultado;
+                }else{
+                    echo "Erro no cálculo!<br>";
+                }
             }
             
         } else {
