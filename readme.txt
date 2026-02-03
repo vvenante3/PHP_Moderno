@@ -38,3 +38,11 @@ MaciOS      -> *M*AMP
 
 "Curso \u{}" <- irá interpretar             'curso \u{}' -> irá retornar " curso \u{} "
 o Codepoint Unicode
+
+----------------------------------------------------------
+                EXPRESSÕES ARITMÉTICAS 
+
+0. () parenteses - não é operador
+1.  ** (Potencialização)
+2. * (multiplicação) / "/"(divisão) / % módulo/porcentagem
+3. + (soma) / - (subtração)
