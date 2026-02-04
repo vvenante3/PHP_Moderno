@@ -7,28 +7,39 @@
 </head>
 <body>
     <?php
-        // verificar se o metodo sera get e se não estara vazio
+        // capturar método utilizado
+        $metodo = $_SERVER['REQUEST_METHOD'];
 
         // trazer a variavel utilizada no form
+        if($metodo === 'GET'){
+           if(isset($_GET['numero'])){
+            // fazer o processamento do resultado
+                $numero = ($_GET['numero']);
+                if(is_numeric($numero)){
+                    // criar uma variavel pro antecessor;
+                    $antecessor = $numero - 1;
+                    // criar uma variavel pro sucessor;
+                    $sucessor = $numero + 1;
+                }
+           }    
+        }
 
-        // fazer o processamento do resultado
-            // criar uma variavel pro antecessor;
-            // criar uma variavel pro sucessor;
+        
     ?>
     <header>
         <h3>Verificador de Antecessor e Sucessor</h3>
     </header>
     <section>
-        <form method="$_GET">
+        <form method="GET">
             <label>Digite um número:</label>
             <input type="number" name="numero" id="numero">
 
-            <input type="submit">verificar</input>
+            <button type="submit">Verificar</button>
         </form>
     </section>
     <section>
         <?php
-            // mostrar os números:
+            // mostrar os números (se eles existirem e forem válidos):
                 // numero inserido
                 // numero antecessor
                 // numero sucessor
