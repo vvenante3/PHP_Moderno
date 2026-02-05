@@ -40,9 +40,11 @@
     </section>
     <section>
         <?php
-            echo "O numero inserido foi: " . $numero . "<br>";
-            echo "O <strong>antecessor</strong> é: " . $antecessor . "<br>";
-            echo "O <strong>sucessor</strong> é: " . $sucessor . "<br>";
+            if(isset($antecessor) && isset($sucessor)){
+                echo "O numero inserido foi: " . $numero . "<br>";
+                echo "O <strong>antecessor</strong> é: " . $antecessor . "<br>";
+                echo "O <strong>sucessor</strong> é: " . $sucessor . "<br>";
+            }
         ?>
     </section>
 
