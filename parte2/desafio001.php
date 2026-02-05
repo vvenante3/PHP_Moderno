@@ -36,13 +36,13 @@
 
             <button type="submit">Verificar</button>
         </form>
+        <br>
     </section>
     <section>
         <?php
-            // mostrar os números (se eles existirem e forem válidos):
-                // numero inserido
-                // numero antecessor
-                // numero sucessor
+            echo "O numero inserido foi: " . $numero . "<br>";
+            echo "O <strong>antecessor</strong> é: " . $antecessor . "<br>";
+            echo "O <strong>sucessor</strong> é: " . $sucessor . "<br>";
         ?>
     </section>
 
