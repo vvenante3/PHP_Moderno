@@ -6,7 +6,12 @@
     <title>Desafio 03 - Conversor de Moeda</title>
 </head>
     <?php
-        // recebimento e processamento dos dados
+        if(isset($_GET['GET'])){
+            $real   = $_GET['real'];
+            $dolar  = $_GET['dolar'];
+
+            $resultado = $real / $dolar;
+        }
     ?>
 <body>
     <header>
@@ -14,7 +19,11 @@
     </header>
     <br>
     <section>
-        <!-- resultado -->
+        <?php
+            if(isset($resultado)){
+                echo "O valor de " . $real . "convertido em dolár é: " . $resultado;
+            }
+        ?>
     </section>
     <section>
         <form method="GET">
