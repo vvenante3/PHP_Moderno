@@ -10,10 +10,13 @@
             $real   = $_GET['real'];
             $dolar  = $_GET['dolar'];
 
+            $dolar_zero = false;
+
             if($dolar == 0){
-                echo "impossível realizar conversão. Valor digitado em R$ foi " . $real . "<br>";
+                $dolar_zero = true;
             } else {
                 $resultado = $real / $dolar;
+                $resultado_formatado = number_format($resultado, 2, '.', '');
             }
         }
     ?>
@@ -22,13 +25,6 @@
         <h3>Conversor de moeda - Dollar </h3>
     </header>
     <br>
-    <section>
-        <?php
-            if(isset($resultado)){
-                echo "O valor de " . $real . " convertido em dolár é: " . $resultado;
-            }
-        ?>
-    </section>
     <section>
         <form method="GET">
             <label>Valor em R$</label>
@@ -39,6 +35,16 @@
             <p></p>
             <button type="submit">Calcular</button>
         </form>
+    </section>
+    <br>
+    <section>
+        <?php
+            if($dolar_zero == true){
+                echo "impossível realizar reversão. Valor digitado em R$ foi " . $real . "<br>";
+            } else if(isset($resultado_formatado)){
+                echo "O valor de R$ " . $real . " revertido em dolár é: " . $resultado_formatado . " U$";
+            }
+        ?>
     </section>
 </body>
 </html>
