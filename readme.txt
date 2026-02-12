@@ -46,3 +46,19 @@ o Codepoint Unicode
 1.  ** (Potencialização)
 2. * (multiplicação) / "/"(divisão) / % módulo/porcentagem
 3. + (soma) / - (subtração)
+
+----------------------------------------------------------
+                SUPERGLOBAIS
+
+PRINCIPAIS
+
+$_GET       -> url
+$_POST      -> console
+$_REQUEST   -> ambos
+
+$_COOKIE   -> setcookie(" ", " ", time() + 3600);
+$_FILES    -> pegar arquivos
+$_SESSION  -> variávies de sessão podem ser reutilizadas // precisa ter uma sessão iniciada
+$_ENV      ->  
+$_SERVER   ->  
+$GLOBALS   ->   
