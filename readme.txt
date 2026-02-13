@@ -59,6 +59,6 @@ $_REQUEST   -> ambos
 $_COOKIE   -> setcookie(" ", " ", time() + 3600);
 $_FILES    -> pegar arquivos
 $_SESSION  -> variávies de sessão podem ser reutilizadas // precisa ter uma sessão iniciada
-$_ENV      ->  
-$_SERVER   ->  
+$_ENV      -> variávies de ambiente
+$_SERVER   -> todas as variávies com os dados do servidor (software utilizado, server_name, server_port.. etc)
 $GLOBALS   ->   
