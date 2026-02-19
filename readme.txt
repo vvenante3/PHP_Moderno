@@ -62,3 +62,8 @@ $_SESSION  -> variávies de sessão podem ser reutilizadas // precisa ter uma se
 $_ENV      -> variávies de ambiente
 $_SERVER   -> todas as variávies com os dados do servidor (software utilizado, server_name, server_port.. etc)
 $GLOBALS   ->   
+
+----------------------------------------------------------
+                FORMULÁRIOS RETROALIMENTADOS
+
+É quando você utiliza um arquivo .php junto com o .html (sem a necessidade de ter '2' arquivos);
