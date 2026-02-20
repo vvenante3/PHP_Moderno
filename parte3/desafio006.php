@@ -14,9 +14,9 @@
             if(isset($_POST['dividendo']) && isset($_POST['divisor'])){
                 $dividendo = $_POST['dividendo'] ;
                 $divisor = $_POST['divisor'];
-
-                $quociente = $dividendo / $divisor;
-                $int_quocinte = (int)$quociente;
+                                                            // validar se divisor == 0
+                $quociente = $dividendo / $divisor;         
+                $int_quocinte = (int)$quociente;            // corrigir com intdiv()
                 $resto = $dividendo % $divisor;
             }
         ?>
@@ -35,8 +35,10 @@
     </main>
     <section>
         <?php
-            echo "<strong>Quociente:</strong> " . $dividendo . " / " . $divisor . " = " . $int_quocinte . "<br>";
-            echo "<strong>Resto:</strong> " . $resto;
+            if(isset($int_quocinte)){                       // corrigir a saída
+                echo "<strong>Quociente:</strong> " . $dividendo . " / " . $divisor . " = " . $int_quocinte . "<br>";
+                echo "<strong>Resto:</strong> " . $resto;
+            }
         ?>
     </section>    
 </body>
