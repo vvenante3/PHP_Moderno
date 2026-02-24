@@ -13,7 +13,7 @@
         <?php
             if(isset($_POST['num']) && ($POST['num'] =! 0)){
                 $numero = $_POST['num'];
-                $raiz = $numero * $numero;
+                $raiz = $numero * $numero;                      // Pesquisar por funções próprias para esses cálculos
                 $cubico = $numero * $numero * $numero;
             }
         ?>
