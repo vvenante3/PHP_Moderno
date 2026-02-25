@@ -11,7 +11,7 @@
     </header>
     <section>
         <?php
-            if(isset($_GET['nota1'] ) && ($_GET['nota2'])){     // fazer tratamento de notas e peso 0
+            if(isset($_GET['nota1'] ) && isset($_GET['nota2'])){     // fazer tratamento de notas e peso 0
                 $nota1 = $_GET['nota1'];
                 $peso1 = $_GET['peso1'];                    
 
